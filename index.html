@@ -1,0 +1,205 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <title>Daphne is One — in the Sun</title>
+  <meta name="viewport" content="width=device-width,initial-scale=1">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Fraunces:ital,opsz,wght@0,9..144,400;0,9..144,600;0,9..144,800;0,9..144,900;1,9..144,600;1,9..144,800&family=DM+Sans:wght@400;500;600;700&family=Caveat:wght@500;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+
+<div class="caustics"></div>
+<div class="caustics alt"></div>
+<div class="ripples"></div>
+
+<main class="stage">
+  <div class="card-wrap">
+
+    <div class="peekers" aria-hidden="true">
+
+      <div class="peeker pk-float">
+        <svg viewBox="0 0 100 100">
+          <circle cx="50" cy="50" r="42" fill="#ff7a8a"/>
+          <circle cx="50" cy="50" r="14" fill="#bfeaff"/>
+          <path d="M50 8 a42 42 0 0 1 42 42 l-14 0 a28 28 0 0 0 -28 -28 z" fill="#fff"/>
+          <path d="M50 92 a42 42 0 0 1 -42 -42 l14 0 a28 28 0 0 0 28 28 z" fill="#fff"/>
+        </svg>
+      </div>
+
+      <div class="peeker pk-watermelon">
+        <svg viewBox="0 0 100 100">
+          <path d="M50 88 L8 24 Q50 6 92 24 Z" fill="#3aa66a"/>
+          <path d="M50 84 L14 26 Q50 12 86 26 Z" fill="#fff8e0"/>
+          <path d="M50 80 L20 30 Q50 18 80 30 Z" fill="#ff5b6e"/>
+          <ellipse cx="40" cy="42" rx="2.5" ry="4" fill="#2a2a2a" transform="rotate(-12 40 42)"/>
+          <ellipse cx="55" cy="38" rx="2.5" ry="4" fill="#2a2a2a" transform="rotate(6 55 38)"/>
+          <ellipse cx="48" cy="56" rx="2.5" ry="4" fill="#2a2a2a"/>
+          <ellipse cx="62" cy="52" rx="2.5" ry="4" fill="#2a2a2a" transform="rotate(10 62 52)"/>
+          <ellipse cx="50" cy="70" rx="2.5" ry="4" fill="#2a2a2a"/>
+        </svg>
+      </div>
+
+      <div class="peeker pk-popsicle">
+        <svg viewBox="0 0 100 100">
+          <rect x="44" y="60" width="12" height="32" rx="3" fill="#c08b5c"/>
+          <path d="M30 22 Q50 6 70 22 L70 64 Q50 76 30 64 Z" fill="#ffd166"/>
+          <path d="M30 38 Q50 30 70 38 L70 50 Q50 58 30 50 Z" fill="#ff7a8a"/>
+          <path d="M30 22 Q50 6 70 22 L70 32 Q50 26 30 32 Z" fill="#9be7ff"/>
+          <circle cx="42" cy="44" r="2" fill="#fff" opacity=".7"/>
+          <circle cx="58" cy="32" r="1.6" fill="#fff" opacity=".7"/>
+        </svg>
+      </div>
+
+      <div class="peeker pk-towel">
+        <svg viewBox="0 0 100 140" preserveAspectRatio="xMidYMid meet">
+          <rect x="14" y="10" width="72" height="120" rx="4" fill="#ffd166"/>
+          <rect x="14" y="10" width="72" height="14" fill="#ff7a8a"/>
+          <rect x="14" y="40" width="72" height="8" fill="#ff7a8a"/>
+          <rect x="14" y="66" width="72" height="8" fill="#5cc8e8"/>
+          <rect x="14" y="92" width="72" height="8" fill="#5cc8e8"/>
+          <rect x="14" y="116" width="72" height="14" fill="#ff7a8a"/>
+          <rect x="14" y="10" width="72" height="120" rx="4" fill="none" stroke="#fff8e0" stroke-width="3"/>
+        </svg>
+      </div>
+
+      <div class="peeker pk-shades">
+        <svg viewBox="0 0 100 100">
+          <path d="M14 50 Q34 46 42 50 Q50 46 58 50 Q70 46 86 50" stroke="#2a2a2a" stroke-width="4" fill="none" stroke-linecap="round"/>
+          <ellipse cx="28" cy="56" rx="18" ry="14" fill="#2a2a2a"/>
+          <ellipse cx="72" cy="56" rx="18" ry="14" fill="#2a2a2a"/>
+          <ellipse cx="22" cy="52" rx="6" ry="4" fill="#fff" opacity=".7"/>
+          <ellipse cx="66" cy="52" rx="6" ry="4" fill="#fff" opacity=".7"/>
+        </svg>
+      </div>
+
+      <div class="peeker pk-cake">
+        <svg viewBox="0 0 100 100">
+          <ellipse cx="50" cy="82" rx="34" ry="6" fill="#e8a8b8"/>
+          <rect x="16" y="54" width="68" height="30" fill="#ffd9e3"/>
+          <ellipse cx="50" cy="54" rx="34" ry="6" fill="#fff5fa"/>
+          <path d="M16 60 Q24 70 32 60 T48 60 T64 60 T80 60 L84 60 L84 54 L16 54 Z" fill="#ff7a8a"/>
+          <circle cx="26" cy="66" r="2.5" fill="#5cc8e8"/>
+          <circle cx="42" cy="72" r="2.5" fill="#ffcc4d"/>
+          <circle cx="58" cy="68" r="2.5" fill="#7dd06b"/>
+          <circle cx="74" cy="74" r="2.5" fill="#ff5b6e"/>
+          <rect x="47" y="30" width="6" height="22" fill="#fff" stroke="#ff7a8a" stroke-width="1.5"/>
+          <path d="M50 18 Q44 24 48 30 Q52 26 50 18" fill="#ffb84d"/>
+          <path d="M50 18 Q44 24 48 30 Q52 26 50 18" fill="#ff7a3a" opacity=".6"/>
+        </svg>
+      </div>
+
+    </div><!-- /.peekers -->
+
+    <article class="card">
+      <p class="eyebrow">our littlest sunbeam is turning</p>
+
+      <h1 class="headline">
+        <span class="one" aria-label="One">
+          <span class="sun-o" aria-hidden="true">
+            <span class="sun-rays">
+              <span style="--a:0deg"></span><span style="--a:30deg"></span>
+              <span style="--a:60deg"></span><span style="--a:90deg"></span>
+              <span style="--a:120deg"></span><span style="--a:150deg"></span>
+              <span style="--a:180deg"></span><span style="--a:210deg"></span>
+              <span style="--a:240deg"></span><span style="--a:270deg"></span>
+              <span style="--a:300deg"></span><span style="--a:330deg"></span>
+            </span>
+            <span class="sun-core"></span>
+          </span>
+          <span class="n" style="margin: 0 0 0 -10px">N</span>
+          <span class="e" style="margin: 0 0 0 10px"> E</span>
+        </span>
+      </h1>
+
+      <p class="in-the-sun"><em>in</em> the <em>sun</em></p>
+
+      <p class="ribbon">Splash in &amp; celebrate</p>
+
+      <h2 class="name">Daphne</h2>
+      <p class="turning">TURNING ONE · MAY 26, 2026</p>
+
+      <div class="stack">
+        <div class="row">
+          <div class="label">when</div>
+          <div class="v1">Sunday, May 31st · 12pm–3pm</div>
+        </div>
+        <div class="row">
+          <div class="label">where</div>
+          <div class="v1">2013 Maywill St, Richmond VA 23230</div>
+        </div>
+      </div>
+
+      <p class="note">bring a swimsuit &amp; a towel ☀</p>
+
+      <div class="cta">
+        <button class="btn btn-primary" id="rsvpBtn">Splash in — RSVP</button>
+        <a class="btn directions" href="https://maps.google.com/?q=2013+Maywill+St+Richmond+VA+23230" target="_blank" rel="noopener">Get directions</a>
+      </div>
+
+      <p class="from">with love, Alex &amp; PJ</p>
+    </article>
+
+  </div><!-- /.card-wrap -->
+</main>
+
+<!-- Modal -->
+<div class="modal-bg" id="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+  <div class="modal">
+    <button class="close" id="closeBtn" aria-label="Close">×</button>
+
+    <div id="formView">
+      <h2 id="modalTitle">RSVP for Daphne</h2>
+      <p class="sub">Let us know if you can splash in!</p>
+
+      <div class="field">
+        <label>Will you be there?</label>
+        <div class="seg" id="attSeg">
+          <button data-v="yes" class="active" type="button">Yes — see you poolside!</button>
+          <button data-v="no" type="button">Sadly, can't make it</button>
+        </div>
+      </div>
+
+      <div class="field">
+        <label for="nm">Your name</label>
+        <input id="nm" type="text" placeholder="e.g. Aunt Mira" autocomplete="name">
+      </div>
+
+      <div class="field" id="guestField">
+        <label for="gc">How many splashing in?</label>
+        <select id="gc">
+          <option>Just me</option>
+          <option>2</option>
+          <option>3</option>
+          <option>4</option>
+          <option>5+</option>
+        </select>
+      </div>
+
+      <div class="field">
+        <label for="msg">A note for the birthday girl</label>
+        <textarea id="msg" rows="2" placeholder="something sweet for daphne…"></textarea>
+      </div>
+
+      <div class="modal-actions">
+        <button class="btn btn-ghost" id="cancelBtn" type="button">Cancel</button>
+        <button class="btn btn-primary" id="submitBtn" type="button">Send RSVP</button>
+      </div>
+    </div>
+
+    <div id="doneView" class="confirm" style="display:none">
+      <div class="checkmark"></div>
+      <h2 id="doneTitle">You're in!</h2>
+      <p class="sub" id="doneMsg">Daphne is going to be so happy to see you. We'll send a reminder closer to the day.</p>
+      <button class="btn btn-primary" id="doneBtn" type="button" style="margin: 8px auto 0;">Close</button>
+    </div>
+  </div>
+</div>
+
+<div class="confetti" id="confetti" aria-hidden="true"></div>
+
+<script src="app.js"></script>
+</body>
+</html>
