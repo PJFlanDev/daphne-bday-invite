@@ -239,10 +239,10 @@ body::-webkit-scrollbar {
 }
 .pk-kiwi {
   top: 76%;
-  right: -52px;
+  left: -52px;
   width: 90px;
   height: 90px;
-  --r: 22deg;
+  --r: -22deg;
   animation-delay: -2.8s;
 }
 .pk-strawberry {
@@ -255,10 +255,10 @@ body::-webkit-scrollbar {
 }
 .pk-flamingo {
   top: 76%;
-  left: -58px;
+  right: -58px;
   width: 120px;
   height: 150px;
-  --r: -14deg;
+  --r: 14deg;
   animation-delay: -3.4s;
 }
 .pk-cake {
@@ -786,6 +786,18 @@ body::-webkit-scrollbar {
 }
 
 /* ── Responsive ── */
+/* ── Desktop: tighten spacing when viewport height is constrained ── */
+@media (max-height: 900px) and (min-width: 481px) {
+  .stage   { padding: 32px 18px 36px; }
+  .card    { padding: 28px 32px 24px; }
+  .one     { font-size: clamp(72px, 22vw, 96px); }
+  .name    { font-size: clamp(48px, 14vw, 58px); }
+  .turning { margin: 6px 0 14px; }
+  .stack   { margin: 8px 0 12px; }
+  .note    { margin: 4px 0 10px; }
+  .from    { margin-top: 14px; }
+}
+
 @media (max-width: 480px) {
   .stage {
     padding: 44px 14px 32px;
@@ -851,9 +863,9 @@ body::-webkit-scrollbar {
   .pk-popsicle   { width: 96px;  height: 96px;  right: -56px; }
   .pk-towel      { width: 80px;  height: 118px; left: -50px; }
   .pk-shades     { width: 74px;  height: 74px;  right: -48px; }
-  .pk-kiwi       { width: 66px;  height: 66px;  right: -44px; }
+  .pk-kiwi       { width: 66px;  height: 66px;  left: -44px; }
   .pk-strawberry { width: 78px;  height: 78px;  left: -48px; }
-  .pk-flamingo   { width: 88px;  height: 110px; left: -50px; }
+  .pk-flamingo   { width: 88px;  height: 110px; right: -50px; }
   .pk-cake       { width: 74px;  height: 74px;  top: -42px; margin-left: -37px; }
 }
 
@@ -864,8 +876,8 @@ body::-webkit-scrollbar {
   .pk-popsicle   { width: 78px;  height: 78px;  left: auto; right: -42px; }
   .pk-towel      { width: 66px;  height: 96px;  left: -40px; }
   .pk-shades     { width: 60px;  height: 60px;  right: -36px; }
-  .pk-kiwi       { width: 54px;  height: 54px;  right: -32px; }
+  .pk-kiwi       { width: 54px;  height: 54px;  left: -32px; }
   .pk-strawberry { width: 64px;  height: 64px;  left: -40px; }
-  .pk-flamingo   { width: 72px;  height: 90px;  left: -42px; }
+  .pk-flamingo   { width: 72px;  height: 90px;  right: -42px; }
   .pk-cake       { width: 56px;  height: 56px;  margin-left: -28px; top: -24px; }
 }
