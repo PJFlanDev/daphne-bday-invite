@@ -32,6 +32,11 @@ body {
   );
   min-height: 100vh;
   overflow-x: hidden;
+  scrollbar-width: none;
+  -ms-overflow-style: none;
+}
+body::-webkit-scrollbar {
+  display: none;
 }
 
 /* ── Background effects ── */
@@ -781,28 +786,34 @@ body {
 }
 
 /* ── Responsive ── */
+@media (max-width: 480px) {
+  .stage  { padding: 44px 14px 32px; }
+  .card   { padding: 24px 16px 20px; }
+
+  .eyebrow  { font-size: 18px; margin: 0 0 2px; }
+  .headline { margin: 2px 0 4px; }
+  .one      { font-size: clamp(60px, 18vw, 90px); }
+
+  .in-the-sun { font-size: clamp(18px, 5vw, 26px); margin-top: 0; }
+  .ribbon     { margin: 10px auto 2px; }
+  .name       { font-size: clamp(38px, 11vw, 58px); }
+  .turning    { margin: 6px 0 14px; }
+
+  .stack      { margin: 6px 0 10px; gap: 6px; }
+  .stack .row { padding: 8px 12px; }
+  .stack .v1  { font-size: 15px; }
+
+  .note { font-size: 17px; margin: 4px 0 10px; }
+  .cta  { gap: 8px; }
+  .cta .btn { padding: 11px 16px; }
+  .from { margin-top: 12px; font-size: 17px; }
+}
+
 @media (max-width: 380px) {
-  .pk-float {
-    left: -22px;
-    top: -36px;
-  }
-  .pk-watermelon {
-    right: -22px;
-    top: -36px;
-  }
-  .pk-popsicle {
-    left: -38px;
-  }
-  .pk-towel {
-    left: -36px;
-  }
-  .pk-shades {
-    right: -38px;
-  }
-  .pk-cake {
-    width: 58px;
-    height: 58px;
-    margin-left: -29px;
-    top: -40px;
-  }
+  .pk-float      { left: -22px; top: -36px; }
+  .pk-watermelon { right: -22px; top: -36px; }
+  .pk-popsicle   { left: -38px; }
+  .pk-towel      { left: -36px; }
+  .pk-shades     { right: -38px; }
+  .pk-cake       { width: 58px; height: 58px; margin-left: -29px; top: -40px; }
 }
