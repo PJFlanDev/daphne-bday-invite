@@ -787,33 +787,85 @@ body::-webkit-scrollbar {
 
 /* ── Responsive ── */
 @media (max-width: 480px) {
-  .stage  { padding: 44px 14px 32px; }
-  .card   { padding: 24px 16px 20px; }
+  .stage {
+    padding: 44px 14px 32px;
+  }
+  .card {
+    padding: 24px 16px 20px;
+  }
 
-  .eyebrow  { font-size: 18px; margin: 0 0 2px; }
-  .headline { margin: 2px 0 4px; }
-  .one      { font-size: clamp(60px, 18vw, 90px); }
+  .eyebrow {
+    font-size: 18px;
+    margin: 0 0 2px;
+  }
+  .headline {
+    margin: 2px 0 4px;
+  }
+  .one {
+    font-size: clamp(60px, 18vw, 90px);
+  }
 
-  .in-the-sun { font-size: clamp(18px, 5vw, 26px); margin-top: 0; }
-  .ribbon     { margin: 10px auto 2px; }
-  .name       { font-size: clamp(38px, 11vw, 58px); }
-  .turning    { margin: 6px 0 14px; }
+  .in-the-sun {
+    font-size: clamp(18px, 5vw, 26px);
+    margin-top: 0;
+  }
+  .ribbon {
+    margin: 10px auto 2px;
+  }
+  .name {
+    font-size: clamp(38px, 11vw, 58px);
+  }
+  .turning {
+    margin: 6px 0 14px;
+  }
 
-  .stack      { margin: 6px 0 10px; gap: 6px; }
-  .stack .row { padding: 8px 12px; }
-  .stack .v1  { font-size: 15px; }
+  .stack {
+    margin: 6px 0 10px;
+    gap: 6px;
+  }
+  .stack .row {
+    padding: 8px 12px;
+  }
+  .stack .v1 {
+    font-size: 15px;
+  }
 
-  .note { font-size: 17px; margin: 4px 0 10px; }
-  .cta  { gap: 8px; }
-  .cta .btn { padding: 11px 16px; }
-  .from { margin-top: 12px; font-size: 17px; }
+  .note {
+    font-size: 17px;
+    margin: 4px 0 10px;
+  }
+  .cta {
+    gap: 14px;
+  }
+  .cta .btn {
+    padding: 11px 16px;
+  }
+  .from {
+    margin-top: 12px;
+    font-size: 17px;
+  }
+
+  /* Shrink peekers ~25% and pull them further off the card edges */
+  .pk-float      { width: 108px; height: 108px; top: -52px; left: -50px; }
+  .pk-watermelon { width: 74px;  height: 74px;  top: -22px; right: -22px; }
+  .pk-popsicle   { width: 96px;  height: 96px;  right: -56px; }
+  .pk-towel      { width: 80px;  height: 118px; left: -50px; }
+  .pk-shades     { width: 74px;  height: 74px;  right: -48px; }
+  .pk-kiwi       { width: 66px;  height: 66px;  right: -44px; }
+  .pk-strawberry { width: 78px;  height: 78px;  left: -48px; }
+  .pk-flamingo   { width: 88px;  height: 110px; left: -50px; }
+  .pk-cake       { width: 74px;  height: 74px;  top: -42px; margin-left: -37px; }
 }
 
 @media (max-width: 380px) {
-  .pk-float      { left: -22px; top: -36px; }
-  .pk-watermelon { right: -22px; top: -36px; }
-  .pk-popsicle   { left: -38px; }
-  .pk-towel      { left: -36px; }
-  .pk-shades     { right: -38px; }
-  .pk-cake       { width: 58px; height: 58px; margin-left: -29px; top: -40px; }
+  /* Shrink peekers ~40% from desktop and pull further outside card edges */
+  .pk-float      { width: 88px;  height: 88px;  top: -36px; left: -38px; }
+  .pk-watermelon { width: 60px;  height: 60px;  top: -18px; right: -16px; }
+  .pk-popsicle   { width: 78px;  height: 78px;  left: auto; right: -42px; }
+  .pk-towel      { width: 66px;  height: 96px;  left: -40px; }
+  .pk-shades     { width: 60px;  height: 60px;  right: -36px; }
+  .pk-kiwi       { width: 54px;  height: 54px;  right: -32px; }
+  .pk-strawberry { width: 64px;  height: 64px;  left: -40px; }
+  .pk-flamingo   { width: 72px;  height: 90px;  left: -42px; }
+  .pk-cake       { width: 56px;  height: 56px;  margin-left: -28px; top: -24px; }
 }
