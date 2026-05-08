@@ -53,8 +53,7 @@ submitBtn.addEventListener("click", () => {
   doneView.style.display = "";
   if (attending === "yes") {
     doneTitle.textContent = `See you poolside, ${name}!`;
-    doneMsg.textContent =
-      "Daphne is going to be so happy to see you. We'll send a reminder closer to the day.";
+    doneMsg.textContent = "Daphne is going to be so happy to see you!";
     blastConfetti();
   } else {
     doneTitle.textContent = `We'll miss you, ${name}.`;
