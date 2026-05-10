@@ -587,6 +587,28 @@ body::-webkit-scrollbar {
     0 6px 14px -4px rgba(160, 100, 200, 0.55);
 }
 
+.wishlist {
+  background: linear-gradient(180deg, var(--sun), var(--sun-2));
+  color: white;
+  border: 0;
+  box-shadow:
+    0 10px 0 -2px oklch(0.7 0.18 55),
+    0 18px 30px -8px rgba(220, 140, 40, 0.5);
+  text-decoration: none;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+}
+.wishlist:hover {
+  transform: translateY(-2px);
+}
+.wishlist:active {
+  transform: translateY(2px);
+  box-shadow:
+    0 4px 0 -2px oklch(0.62 0.18 55),
+    0 6px 14px -4px rgba(200, 120, 30, 0.5);
+}
+
 /* ── Modal ── */
 .modal-bg {
   position: fixed;
